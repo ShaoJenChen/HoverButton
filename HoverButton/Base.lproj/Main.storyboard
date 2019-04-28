@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="HoverButton" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,15 +704,111 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HoverButton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="593" height="333"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Do-2Y-F89" customClass="HoverButton" customModule="HoverButton" customModuleProvider="target">
+                                <rect key="frame" x="351" y="107" width="80" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="subwoofer70" imagePosition="overlaps" alignment="center" alternateImage="subwoofer100" imageScaling="axesIndependently" inset="2" id="ZYO-Tf-fAG">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hoverImage" value="subwoofer85"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectedHoverButton:" target="XfG-lQ-9wD" id="o39-bq-guj"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="KJA-Yo-rVp" customClass="HoverButton" customModule="HoverButton" customModuleProvider="target">
+                                <rect key="frame" x="250" y="107" width="80" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="filter70" imagePosition="overlaps" alignment="center" alternateImage="filter100" imageScaling="axesIndependently" inset="2" id="Mw7-3Z-qCw">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hoverImage" value="filter85"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectedHoverButton:" target="XfG-lQ-9wD" id="Fmb-cd-UCf"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Sr-LR-ifC" customClass="HoverButton" customModule="HoverButton" customModuleProvider="target">
+                                <rect key="frame" x="50" y="106" width="80" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="graphicEQ70" imagePosition="overlaps" alignment="center" alternateImage="graphicEQ100" imageScaling="axesIndependently" inset="2" id="lv4-DM-zYN">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hoverImage" value="graphicEQ85"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectedHoverButton:" target="XfG-lQ-9wD" id="gCi-UJ-ZVG"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="av8-gs-oOU" customClass="HoverButton" customModule="HoverButton" customModuleProvider="target">
+                                <rect key="frame" x="452" y="107" width="80" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="delay70" imagePosition="overlaps" alignment="center" alternateImage="delay100" imageScaling="axesIndependently" inset="2" id="6vj-KG-NaM">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hoverImage" value="delay85"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectedHoverButton:" target="XfG-lQ-9wD" id="obJ-kV-XeW"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="B4C-6g-udz" customClass="HoverButton" customModule="HoverButton" customModuleProvider="target">
+                                <rect key="frame" x="149" y="107" width="80" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="parametricEQ70" imagePosition="overlaps" alignment="center" alternateImage="parametricEQ100" imageScaling="axesIndependently" inset="2" id="6WD-md-NV8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hoverImage" value="parametricEQ85"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectedHoverButton:" target="XfG-lQ-9wD" id="emB-bE-vPH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btn1" destination="5Sr-LR-ifC" id="jrx-NU-Ta2"/>
+                        <outlet property="btn2" destination="B4C-6g-udz" id="qKx-57-bWu"/>
+                        <outlet property="btn3" destination="KJA-Yo-rVp" id="2av-vx-DbF"/>
+                        <outlet property="btn4" destination="5Do-2Y-F89" id="MVG-Ze-b4Z"/>
+                        <outlet property="btn5" destination="av8-gs-oOU" id="8Jq-HX-hau"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="727.5" y="72.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delay100" width="42" height="79.680000305175781"/>
+        <image name="delay70" width="42" height="79.680000305175781"/>
+        <image name="delay85" width="42" height="79.680000305175781"/>
+        <image name="filter100" width="42" height="79.680000305175781"/>
+        <image name="filter70" width="42" height="79.680000305175781"/>
+        <image name="filter85" width="42" height="79.680000305175781"/>
+        <image name="graphicEQ100" width="42" height="79.680000305175781"/>
+        <image name="graphicEQ70" width="42" height="79.680000305175781"/>
+        <image name="graphicEQ85" width="42" height="79.680000305175781"/>
+        <image name="parametricEQ100" width="42" height="79.680000305175781"/>
+        <image name="parametricEQ70" width="42" height="79.680000305175781"/>
+        <image name="parametricEQ85" width="42" height="79.680000305175781"/>
+        <image name="subwoofer100" width="42.240001678466797" height="79.680000305175781"/>
+        <image name="subwoofer70" width="42.240001678466797" height="79.680000305175781"/>
+        <image name="subwoofer85" width="42.240001678466797" height="79.680000305175781"/>
+    </resources>
 </document>
