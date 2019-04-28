@@ -25,33 +25,18 @@ class ViewController: NSViewController {
         self.hoverButtons.append(contentsOf: [btn1, btn2, btn3, btn4, btn5])
         
     }
-
-    override var representedObject: Any? {
-        didSet {
-        }
-    }
-
-
-    private func clearOtherBtns(_ clickBtn: HoverButton) {
+    
+    @IBAction func selectedHoverButton(_ sender: HoverButton) {
         
         for btn in self.hoverButtons {
             
-            if btn == clickBtn { continue }
+            if btn == sender { continue }
             
             btn.state = .off
-            
-            btn.isEnabled = true
             
         }
         
     }
     
-    @IBAction func selectedHoverButton(_ sender: HoverButton) {
-        
-        self.clearOtherBtns(sender)
-        
-        sender.isEnabled = false
-        
-    }
 }
 

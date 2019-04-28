@@ -22,8 +22,10 @@ class HoverButton: NSButton {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
-        if self.state == .on { swap(&self.image!, &self.hoverImage) }
+        self.isEnabled = !Bool(truncating: NSNumber(value: self.state.rawValue))
         
+        if self.state == .on { swap(&self.image!, &self.hoverImage) }
+
     }
     
     override func updateTrackingAreas() {
